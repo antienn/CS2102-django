@@ -36,6 +36,8 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'courses.apps.CoursesConfig',
+    'ckeditor',
+    'ckeditor_uploader',
 ]
 AUTH_USER_MODEL = 'courses.User'
 
@@ -124,3 +126,7 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 import pymysql
 
 pymysql.install_as_MySQLdb()
+
+MEDIA_ROOT = '%s/courses/static/' %BASE_DIR
+
+CKEDITOR_UPLOAD_PATH= "img/lessons"
